@@ -25,8 +25,6 @@ public class MainController {
                              @RequestParam String planet,
                              @RequestParam String eye_color
     ) {
-        //model.addAttribute("profil", repository.save(gender, planet, eye_color));
-
         return "profil";
 
 
