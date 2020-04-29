@@ -4,16 +4,17 @@ public class Profil {
 
     private int id;
     private String genre;
+    private String eye;
     private String name;
-    private String hair;
     private String image;
 
-    public Profil(int id, String genre, String name, String hair, String image) {
+    public Profil(int id, String genre, String name, String eye, String image) {
         this.id = id;
         this.genre = genre;
         this.name = name;
-        this.hair = hair;
+        this.eye = eye;
         this.image = image;
+
     }
 
     public Profil() {}
@@ -42,12 +43,12 @@ public class Profil {
         this.name = name;
     }
 
-    public String getHair() {
-        return hair;
+    public String getEye() {
+        return eye;
     }
 
-    public void setHair(String hair) {
-        this.hair = hair;
+    public void setEye(String eye) {
+        this.eye = eye;
     }
 
     public String getImage() {
