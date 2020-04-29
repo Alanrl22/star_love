@@ -32,14 +32,17 @@ body {
     margin: 20px;
 }
 h1 {
+    display: flex;
+    justify-content: center;
     font-size: 3rem;
     font-family: 'Russo One';
     font-style: normal;
     font-weight: 400;
     color: #FBFF00;
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+
 }
 .fa-star {
     color: #FBFF00;

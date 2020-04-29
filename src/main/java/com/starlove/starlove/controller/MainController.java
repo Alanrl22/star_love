@@ -26,9 +26,10 @@ public class MainController {
                              @RequestParam String colors,
                              @RequestParam String genderValue
     ) {
+
         System.out.println(colors);
         model.addAttribute("profils", repository.findLove(genderValue, colors));
-
+      
         return "profil";
     }
 
