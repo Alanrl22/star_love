@@ -2,7 +2,7 @@ package com.starlove.starlove.entity;
 
 public class Choose {
 
-    private String genre;
+    private String gender;
     private String planet;
     private String eye;
     private String hair;
@@ -12,16 +12,16 @@ public class Choose {
     public Choose(){
     }
     //Constructor with all items
-    public Choose(String genre, String planet, String eye, String hair, String skin) {
-        this.genre = genre;
+    public Choose(String gender, String planet, String eye, String hair, String skin) {
+        this.gender = gender;
         this.planet = planet;
         this.eye = eye;
         this.hair = hair;
         this.skin = skin;
     }
     //Constructor with eye
-    public Choose(String genre, String planet, String eye) {
-        this.genre = genre;
+    public Choose(String gender, String planet, String eye) {
+        this.gender = gender;
         this.planet = planet;
         this.eye = eye;
     }
@@ -40,8 +40,8 @@ public class Choose {
 
 
     // Getter
-    public String getGenre() {
-        return genre;
+    public String getGender() {
+        return gender;
     }
     public String getPlanet() {
         return planet;
@@ -56,8 +56,8 @@ public class Choose {
         return skin;
     }
     //Seter
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
     public void setPlanet(String planet) {
         this.planet = planet;
