@@ -20,9 +20,8 @@ public class Choose {
         this.skin = skin;
     }
     //Constructor with eye
-    public Choose(String gender, String planet, String eye) {
-        this.gender = gender;
-        this.planet = planet;
+    public Choose(String eye) {
+
         this.eye = eye;
     }
      /* Constructor with hair

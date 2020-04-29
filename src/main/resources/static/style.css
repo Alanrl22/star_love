@@ -31,7 +31,6 @@
 body {
     margin: 20px;
 }
-
 h1 {
     display: flex;
     justify-content: center;
@@ -42,20 +41,22 @@ h1 {
     color: #FBFF00;
     margin-top: 2rem;
     margin-bottom: 2rem;
-}
 
+
+}
 .fa-star {
     color: #FBFF00;
-    font-size: 2rem;
+    font-size: 6rem;
 }
-
 /* ----------   END OF HOME PAGE  ------------------ */
 
 /* ----------   START OF PROFIL  ------------------ */
-body {
-    background-color: black;
+.card {
+    display: flex;
+    width: 12rem;
+    height: 40vh;
+    text-align: center;
 }
-
 /* ----------   END OF PROFIL  ------------------ */
 
 /* ----------   START OF TRY AGAIN  ------------------ */

@@ -11,7 +11,7 @@ import com.starlove.starlove.repository.ProfilRepository;
 @Controller
 public class MainController {
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home() {
 
         return "home";
@@ -21,12 +21,18 @@ public class MainController {
 
     @PostMapping("/profil")
     public String postProfil(Model model,
-                             @RequestParam String gender,
-                             @RequestParam String planet,
-                             @RequestParam String eye_color
+                             /*
+                             @RequestParam String planet,*/
+                             @RequestParam String colors,
+                             @RequestParam String genderValue
     ) {
+
+        System.out.println(colors);
+        model.addAttribute("profils", repository.findLove(genderValue, colors));
+      
         return "profil";
-
-
     }
+
+
+
 }
