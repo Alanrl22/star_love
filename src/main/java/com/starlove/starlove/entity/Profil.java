@@ -3,14 +3,14 @@ package com.starlove.starlove.entity;
 public class Profil {
 
     private int id;
-    private String genre;
+    private String gender;
     private String eye;
     private String name;
     private String image;
 
-    public Profil(int id, String genre, String name, String eye, String image) {
+    public Profil(int id, String gender, String name, String eye, String image) {
         this.id = id;
-        this.genre = genre;
+        this.gender = gender;
         this.name = name;
         this.eye = eye;
         this.image = image;
@@ -27,12 +27,12 @@ public class Profil {
         this.id = id;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getGender() {
+        return gender;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getName() {
