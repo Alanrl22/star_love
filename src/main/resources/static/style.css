@@ -1,0 +1,34 @@
+--------------------------------- GENERAL ----------------------------------------------------------------
+
+/*  COLOR */
+
+
+--generality-color-background: #000000;
+--generality-color-font_title: #FBFF00;
+--generality-color-first: #FFFFFF;
+--generality-color-second: #FF0000;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*  the text  */
+--generality-text-font_size: 1rem;
+--generality-title-font_size: 2rem;
+--generality-title_xl-font_size: 3rem;
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/* ----------   START OF HOME PAGE  ------------------ */
+/* ----------   END OF HOME PAGE  ------------------ */
+
+/* ----------   START OF PROFIL  ------------------ */
+/* ----------   END OF PROFIL  ------------------ */
+
+/* ----------   START OF TRY AGAIN  ------------------ */
+/* ----------   END OF TRY AGAIN  ------------------ */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
