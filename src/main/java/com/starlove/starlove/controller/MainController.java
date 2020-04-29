@@ -9,9 +9,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MainController {
 
     @GetMapping("/home")
-    public String home(){
+    public String home() {
 
         return "home";
+    }
+
+    @GetMapping("/profil")
+    public String profil() {
+
+        return "profil";
+    }
+
+    @GetMapping("/try-again")
+    public String tryAgain() {
+
+        return "try-again";
     }
 
 }
