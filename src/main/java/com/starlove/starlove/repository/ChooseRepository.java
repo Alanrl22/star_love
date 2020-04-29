@@ -14,7 +14,7 @@ public class ChooseRepository {
     private final static String DB_PASSWORD = "ewoks1$Ewoks2";
 
 
-    public List<Choose> Findlove() {
+    public List<String> findEyecolors() {
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
@@ -22,21 +22,18 @@ public class ChooseRepository {
         try {
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
+            List<String> colorEyes = new ArrayList<>();
             statement = connection.prepareStatement(
-                    "SELECT distinct(eye_color) FROM people JOIN planet ON people.id_planet = planet.id;"
+                    "SELECT distinct(eye_color) FROM people;"
             );
             resultSet = statement.executeQuery();
 
-            List<Choose> choose = new ArrayList<>();
-
             while (resultSet.next()) {
-                String genre = resultSet.getString("gender");
-                String planet = resultSet.getString("planet.name");
                 String eye = resultSet.getString("eye_color");
 
-                choose.add(new Choose(genre, planet, eye));
+                colorEyes.add(eye);
             }
-            return choose;
+            return colorEyes;
 
         } catch (SQLException e) {
             e.printStackTrace();
