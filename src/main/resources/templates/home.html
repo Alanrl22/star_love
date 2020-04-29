@@ -12,29 +12,37 @@
     <header>
         <h1>STAR LOVE</h1>
     </header>
-    <div>
-    <label class="top-label">Choose your favorite creature</label>
-    <input id="how-friend" name="how" type="radio">
-    <label for="how-friend" class="side-label">FEMALE</label>
-    <input id="how-internet" name="how" type="radio">
-    <label for="how-internet" class="side-label">MALE</label>
-    <input id="how-other" name="how" type="radio">
-    <label for="how-other" class="side-label">Other...</label>
-    <div>
+    <form action="/profil" method="get" class="formulaire">
+        <div>
+        <label class="top-label">Choose your favorite creature</label>
+        <input id="how-friend" name="how" type="radio">
+        <label for="how-friend" class="side-label">FEMALE</label>
+        <input id="how-internet" name="how" type="radio">
+        <label for="how-internet" class="side-label">MALE</label>
+        <input id="how-other" name="how" type="radio">
+        <label for="how-other" class="side-label">Other...</label>
+        </div>
 
-        <p>Origin of the planet</p>
-        <label for="site-search"></label>
-        <input type="search" id="site-search" name="q"
-               aria-label="Search through site content">
-        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+        <select name="planet" size="1">
+            <option value="0">Choose your Planet</option>
+            <option value="1">Tatooine</option>
+            <option value="2">Naboo</option>
+            <option value="3">Corellia</option>
+            <option value="4">Stewjon</option>
+            <option value="5">Umbara</option>
+            <option value="6">Dorin</option>
+            <option value="7">Ryloth</option>
+        </select>
+
         <p>choose the  eyes color </p>
         <label id="choose">
-             <select name="body" size="1">
+             <select name="body" size="1">    
                 <option value="0">Choose</option>
                 <option value="1">Eyes</option>
                 <option value="2">Hair</option>
                 <option value="3">Planet</option>
             </select>
+
             <select name="colors" size="1">
                 <option value="0">Choose your colors</option>
                 <option value="1">Blue</option>
@@ -45,6 +53,7 @@
                 <option value="6">Yellow</option>
                 <option value="7">Blond</option>
             </select>
+
             <select name="planet" size="1">
                 <option value="0">Choose your Planet</option>
                 <option value="1">Tatooine</option>
@@ -56,6 +65,10 @@
                 <option value="7">Ryloth</option>
             </select>
 
+        <div>
+            <a class="button" href="/profil"><i class="fa fa-star" aria-hidden="true"></i></a>
+        </div>
+    </form>
 <footer>
 </footer>
 </body>
