@@ -19,5 +19,14 @@
                 <p>Planet</p>
             </div>
         </div>
+<div class="card" th:each="profil : ${profils}" >
+    <img src="https://via.placeholder.com/200" alt="Avatar" >
+    <div class="container">
+        <h2><b th:text="${profil.name}">Name</b></h2>
+        <p th:text="${profil.gender}">Genre</p>
+        <p th:text="${profil.eye}">Eye</p>
+        <p>Planet</p>
+    </div>
+</div>
 </body>
 </html>

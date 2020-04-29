@@ -21,14 +21,17 @@ public class MainController {
 
     @PostMapping("/profil")
     public String postProfil(Model model,
-                             @RequestParam String gender,
-                             @RequestParam String planet,
-                             @RequestParam String eye_color
+                             /*
+                             @RequestParam String planet,*/
+                             @RequestParam String colors,
+                             @RequestParam String genderValue
     ) {
-        //model.addAttribute("profil", repository.save(gender, planet, eye_color));
+        System.out.println(colors);
+        model.addAttribute("profils", repository.findLove(genderValue, colors));
 
         return "profil";
-
-
     }
+
+
+
 }
