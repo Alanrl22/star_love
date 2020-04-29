@@ -31,27 +31,29 @@
 body {
     margin: 20px;
 }
-
 h1 {
     font-size: 3rem;
     font-family: 'Russo One';
     font-style: normal;
     font-weight: 400;
     color: #FBFF00;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
-
 .fa-star {
     color: #FBFF00;
-    font-size: 2rem;
+    font-size: 6rem;
 }
-
 /* ----------   END OF HOME PAGE  ------------------ */
 
 /* ----------   START OF PROFIL  ------------------ */
-body {
-    background-color: black;
+.card {
+    display: flex;
+    width: 12rem;
+    height: 40vh;
+    text-align: center;
 }
-
 /* ----------   END OF PROFIL  ------------------ */
 
 /* ----------   START OF TRY AGAIN  ------------------ */
