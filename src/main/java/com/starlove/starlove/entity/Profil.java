@@ -1,6 +1,6 @@
 package com.starlove.starlove.entity;
 
-public class profile {
+public class Profil {
 
     private int id;
     private String genre;
@@ -8,7 +8,7 @@ public class profile {
     private String hair;
     private String image;
 
-    public profile(int id, String genre, String name, String hair, String image) {
+    public Profil(int id, String genre, String name, String hair, String image) {
         this.id = id;
         this.genre = genre;
         this.name = name;
@@ -16,7 +16,7 @@ public class profile {
         this.image = image;
     }
 
-    public profile() {}
+    public Profil() {}
 
     public int getId() {
         return id;
