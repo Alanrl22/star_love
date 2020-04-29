@@ -27,6 +27,10 @@
 /* ----------   END OF HOME PAGE  ------------------ */
 
 /* ----------   START OF PROFIL  ------------------ */
+body {
+    background-color: black;
+}
+
 /* ----------   END OF PROFIL  ------------------ */
 
 /* ----------   START OF TRY AGAIN  ------------------ */
