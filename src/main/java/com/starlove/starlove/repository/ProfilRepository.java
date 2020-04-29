@@ -19,8 +19,7 @@ public class ProfilRepository {
     private final static String DB_USER = "ewoks2";
     private final static String DB_PASSWORD = "ewoks1$Ewoks2!";
 
-    /* public List<Choose> findLove(String gender, String planet_name, String eye_color) {*/
-    public List<Profil> findLove(String genderValue, String eye_color) {
+    public List<Profil> findLove(String genderValue, String eye_color, int planet_id) {
 
         Connection connection = null;
         PreparedStatement statement = null;
@@ -30,16 +29,13 @@ public class ProfilRepository {
             connection = DriverManager.getConnection(
                     DB_URL, DB_USER, DB_PASSWORD
             );
-            /*statement = connection.prepareStatement(
-                    "SELECT * FROM people WHERE gender LIKE  ? AND planet.name LIKE ? AND eye_color Like ? JOIN planet ON planet.id = people.planet_id;"
-            );*/
             statement = connection.prepareStatement(
-                    "SELECT * FROM people WHERE eye_color Like ? AND gender LIKE ? ;"
+                    "SELECT * FROM people " +
+                            "WHERE eye_color Like ? AND gender LIKE ? AND planet_id LIKE ? ;"
             );
-            /*
-            statement.setString(2, planet_name);*/
             statement.setString(1, eye_color);
             statement.setString(2, genderValue);
+            statement.setInt(3, planet_id);
 
             resultSet = statement.executeQuery();
 
@@ -50,8 +46,9 @@ public class ProfilRepository {
                 String eye = resultSet.getString("eye_color");
                 String name = resultSet.getString("name");
                 String gender = resultSet.getString("gender");
+                int idP = resultSet.getInt("planet_id");
 
-                profils.add(new Profil(id, gender, name, eye, null));
+                profils.add(new Profil(id, gender, name, eye, idP, null));
             }
             return profils;
 
