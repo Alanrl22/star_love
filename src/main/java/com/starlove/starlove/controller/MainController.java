@@ -11,7 +11,7 @@ import com.starlove.starlove.repository.ProfilRepository;
 @Controller
 public class MainController {
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home() {
 
         return "home";
