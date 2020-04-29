@@ -1,5 +1,5 @@
 --------------------------------- GENERAL ----------------------------------------------------------------
-
+:root {
 /*  COLOR */
 
 
@@ -8,22 +8,43 @@
 --generality-color-first: #FFFFFF;
 --generality-color-second: #FF0000;
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 /*  the text  */
 --generality-text-font_size: 1rem;
 --generality-title-font_size: 2rem;
 --generality-title_xl-font_size: 3rem;
 
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    background: black;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1rem;
+}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
 /* ----------   START OF HOME PAGE  ------------------ */
+body {
+    margin: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    color: #FBFF00;
+}
+
+.fa-star {
+    color: #FBFF00;
+    font-size: 2rem;
+}
+
 /* ----------   END OF HOME PAGE  ------------------ */
 
 /* ----------   START OF PROFIL  ------------------ */
