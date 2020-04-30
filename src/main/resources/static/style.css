@@ -34,7 +34,7 @@ body {
 h1 {
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-family: 'Russo One';
     font-style: normal;
     font-weight: 400;
@@ -42,6 +42,68 @@ h1 {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+.formulaire {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.side-label::before, .side-label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="radio"] + .side-label::before,
+input[type="radio"] + .side-label::after {
+    border-radius: 50%;
+}
+
+.side-label {
+    display: block;
+    position: relative;
+    margin: 10px 0;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+.side-label::before, .side-label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.side-label::before {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+}
+
+input:focus + .side-label::before {
+    border-color: #9ab593;
+}
+
+.side-label::after {
+    display: none;
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    background-color: yellow;
+}
+
+input:checked + .side-label::after {
+    display: block;
+}
+
 .fa-star {
     color: #FBFF00;
     font-size: 6rem;
@@ -53,6 +115,30 @@ h1 {
 .button:hover {
     opacity: 0.7;
 }
+
+.home-radio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.home-planet{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.home-gender{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
 /* ----------   END OF HOME PAGE  ------------------ */
 
 /* ----------   START OF PROFIL  ------------------ */
