@@ -22,7 +22,6 @@ public class ProfilRepository {
 
     public List<Profil> findLove(String genderValue, String eye_color, String planetName) {
 
-
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
@@ -39,8 +38,6 @@ public class ProfilRepository {
             statement.setString(2, genderValue);
             statement.setString(3, "%"+planetName+"%");
 
-
-
             resultSet = statement.executeQuery();
 
             List<Profil> profils = new ArrayList<>();
@@ -48,10 +45,10 @@ public class ProfilRepository {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String eye = resultSet.getString("eye_color");
-                nameP = resultSet.getString("planet.name");
                 String gender = resultSet.getString("gender");
+                int idP = resultSet.getInt("planet_id");
 
-                profils.add(new Profil(id, eye, gender, nameP, null));
+                profils.add(new Profil(id, gender, eye, idP, null));
             }
             return profils;
 
