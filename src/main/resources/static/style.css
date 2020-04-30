@@ -147,6 +147,7 @@ select{
 }
 .try-again {
     color: #FF0000;
+    margin-top: 1rem;
     text-align: center;
     font-size: 2rem;
     font-family: "Russo One";
@@ -154,6 +155,7 @@ select{
 .star-try {
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
 }
 .lightsaber { position: relative; }
 
@@ -464,8 +466,12 @@ div {
 }
 
 .the-demo {
-    width: 768px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
     margin: 0 auto;
+    margin-left: 2rem;
 }
 .example-item {
     width: 25%;
