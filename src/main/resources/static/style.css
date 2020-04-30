@@ -1,8 +1,6 @@
 --------------------------------- GENERAL ----------------------------------------------------------------
 :root {
 /*  COLOR */
-
-
 --generality-color-background: #000000;
 --generality-color-font_title: #FBFF00;
 --generality-color-first: #FFFFFF;
@@ -31,7 +29,6 @@
 body {
     margin: 20px;
 }
-
 h1 {
     display: flex;
     justify-content: center;
@@ -43,7 +40,6 @@ h1 {
     margin-bottom: 1rem;
     text-align: center;
 }
-
 h2{
     font-size: 1.7rem;
     color: var(--generality-color-first) ;
@@ -66,7 +62,6 @@ h2{
     align-items: center;
     margin-top: 1rem;
 }
-
 #imgstormtrooper{
     height: auto;
     width: auto;
@@ -95,14 +90,11 @@ label#planetName, input.planet-input, div.home-colors, div.home-gender{
     height: 1.2rem;
     border-color: var(--generality-color-font_title);
     text-align: left;
-
 }
 select{
     width: 100%;
     border-radius: 20px;
     border-color: var(--generality-color-font_title);
-
-
 }
 .fa-star {
     color: #FBFF00;
@@ -152,6 +144,33 @@ select{
     text-align: center;
     border-radius: 1rem;
 }
+/* ----------   END OF HOME PAGE  ------------------ */
+
+/* ----------   START OF PROFIL  ------------------ */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 2px solid gray;
+    width: 27vh;
+    height: 39vh;
+    margin: auto;
+    margin-top: 2rem;
+}
+.container p {
+    margin-bottom: 0.1rem;
+}
+.container h2 {
+    margin-top: 0.6rem;
+}
+.container h2 b {
+    color: #FBFF00;
+}
+/* ----------   END OF PROFIL  ------------------ */
+
+/* ----------   START OF TRY AGAIN  ------------------ */
 .try-again {
     color: #FF0000;
     margin-top: 1rem;
@@ -191,7 +210,6 @@ select{
     background: -ms-linear-gradient(left, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* IE10+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 ); /* IE6-9 */
 }
-
 .lightsaber .switch {
     background: #B94A37;
     width: 5px;
@@ -211,7 +229,6 @@ select{
     -o-border-radius: 10px;
     -ms-border-radius: 10px;
 }
-
 .lightsaber input[type=checkbox] {
     position: absolute;
     bottom: 0;
@@ -223,9 +240,8 @@ select{
     -ms-opacity: 0;
     z-index: 77;
 }
-
 .lightsaber .plasma {
-    transition: height 300ms,;
+    transition: height 300ms;
     -moz-transition: height 300ms;
     -webkit-transition: height 300ms;
     -o-transition: height 300ms;
@@ -243,16 +259,13 @@ select{
     -ms-filter: blur(1px);
     height: 0;
 }
-
 .lightsaber input[type=checkbox]:checked ~ div.plasma {
     height: 250px;
 }
-
 .lightsaber input[type=checkbox]:hover ~ div.switch {
     background: #c09853;
     left: 12px;
 }
-
 .lightsaber input[type=checkbox]:checked ~ div.switch {
     background: #468847;
 }
@@ -281,7 +294,6 @@ select{
     -o-animation-iteration-count: infinite;
     -ms-animation-iteration-count: infinite;
 }
-
 .yoda {
     background: rgb(135,220,90); /* Old browsers */
     background: linear-gradient(to right, rgb(135,220,90) 0%,rgb(254,254,254) 30%,rgb(254,254,254) 50%,rgb(254,254,254) 70%,rgb(135,220,90) 100%); /* W3C */
@@ -307,7 +319,6 @@ select{
     -o-animation-iteration-count: infinite;
     -ms-animation-iteration-count: infinite;
 }
-
 .vader {
     background: rgb(229,17,21); /* Old browsers */
     background: linear-gradient(to right, rgba(229,17,21,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(229,17,21,1) 100%); /* W3C */
@@ -333,8 +344,6 @@ select{
     -o-animation-iteration-count: infinite;
     -ms-animation-iteration-count: infinite;
 }
-
-
 .obi-wan {
     background: rgb(55,132,214); /* Old browsers */
     background: linear-gradient(to right, rgba(55,132,214,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(55,132,214,1) 100%); /* W3C */
@@ -360,14 +369,12 @@ select{
     -o-animation-iteration-count: infinite;
     -ms-animation-iteration-count: infinite;
 }
-
 div {
     -webkit-transform : translateZ(0);
     -o-transform : translateZ(0);
     -moz-transform : translateZ(0);
     transform : translateZ(0);
 }
-
 /* Animations */
 @keyframes bastien {
     from { box-shadow: 0 0 10px #ca74dd; }
@@ -485,39 +492,5 @@ div {
     padding-top: 325px;
 }
 
-/* ----------   END OF HOME PAGE  ------------------ */
-
-/* ----------   START OF PROFIL  ------------------ */
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    border: 2px solid gray;
-    width: 27vh;
-    height: 39vh;
-    margin: auto;
-    margin-top: 2rem;
-
-
-}
-
-.container p {
-    margin-bottom: 0.1rem;
-}
-
-.container h2 {
-    margin-top: 0.6rem;
-}
-
-.container h2 b {
-    color: #FBFF00;
-}
-
-/* ----------   END OF PROFIL  ------------------ */
-
-/* ----------   START OF TRY AGAIN  ------------------ */
 /* ----------   END OF TRY AGAIN  ------------------ */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
