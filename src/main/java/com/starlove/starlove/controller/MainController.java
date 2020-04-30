@@ -1,5 +1,6 @@
 package com.starlove.starlove.controller;
 
+import com.starlove.starlove.entity.Planet;
 import com.starlove.starlove.entity.Profil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,7 +36,7 @@ public class MainController {
                              @RequestParam(defaultValue = "blue") String colors,
                              @RequestParam(defaultValue = "other") String genderValue,
                              @RequestParam(defaultValue = "1") int planet_id
-    ) {
+                             ) {
         List<Profil> profils = repository.findLove(genderValue, colors, planet_id);
 
         model.addAttribute("profils", repository.findLove(genderValue, colors, planet_id));
