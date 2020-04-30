@@ -8,15 +8,24 @@ public class Profil {
     private String name;
     private int idP;
     private String image;
+    private String nameP;
 
-    public Profil(int id, String gender, String name, String eye, int idP, String image) {
+    public Profil(int id, String gender, String name, String eye, int idP, String image, String nameP) {
         this.id = id;
         this.gender = gender;
         this.name = name;
         this.eye = eye;
         this.idP= idP;
         this.image = image;
+        this.nameP = nameP;
+    }
 
+    public Profil(int id, String gender, String eye, String nameP, String image) {
+        this.id = id;
+        this.gender = gender;
+        this.eye = eye;
+        this.nameP = nameP;
+        this.image = image;
     }
 
     public Profil() {}
@@ -65,5 +74,12 @@ public class Profil {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getNameP() {
+        return nameP;
+    }
+    public  void  setNameP(String nameP) {
+        this.nameP = nameP;
     }
 }

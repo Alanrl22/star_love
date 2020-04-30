@@ -19,7 +19,7 @@ public class ProfilRepository {
     private final static String DB_USER = "ewoks2";
     private final static String DB_PASSWORD = "ewoks1$Ewoks2!";
 
-    public List<Profil> findLove(String genderValue, String eye_color, int planet_id) {
+    public List<Profil> findLove(String genderValue, String eye_color, String nameP) {
 
         Connection connection = null;
         PreparedStatement statement = null;
@@ -30,12 +30,11 @@ public class ProfilRepository {
                     DB_URL, DB_USER, DB_PASSWORD
             );
             statement = connection.prepareStatement(
-                    "SELECT * FROM people " +
-                            "WHERE eye_color Like ? AND gender LIKE ? AND planet_id LIKE ? ;"
+                    "SELECT gender, people.name As name, planet.name AS planet, eye_color FROM people JOIN planet ON planet.id = people.planet_id WHERE planet.name LIKE ? AND gender LIKE ? AND eye_color LIKE ? ;"
             );
             statement.setString(1, eye_color);
             statement.setString(2, genderValue);
-            statement.setInt(3, planet_id);
+            statement.setString(3, nameP);
 
             resultSet = statement.executeQuery();
 
@@ -44,11 +43,10 @@ public class ProfilRepository {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String eye = resultSet.getString("eye_color");
-                String name = resultSet.getString("name");
+                nameP = resultSet.getString("planet.name");
                 String gender = resultSet.getString("gender");
-                int idP = resultSet.getInt("planet_id");
 
-                profils.add(new Profil(id, gender, name, eye, idP, null));
+                profils.add(new Profil(id, eye, gender, nameP, null));
             }
             return profils;
 
