@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.starlove.starlove.repository.ProfilRepository;
 
-import javax.validation.groups.Default;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,13 +31,14 @@ public class MainController {
 
     @PostMapping("/profil")
     public String postProfil(Model model,
-                             @RequestParam(defaultValue = "blue") String colors,
-                             @RequestParam(defaultValue = "other") String genderValue,
-                             @RequestParam(defaultValue = "1") int planet.name
-    ) {
-        List<Profil> profils = repository.findLove(genderValue, colors, planet.name);
 
-        model.addAttribute("profils", repository.findLove(genderValue, colors, planet.nam));
+                             @RequestParam(defaultValue = "") String colors,
+                             @RequestParam(defaultValue = "") String genderValue,
+                             @RequestParam(defaultValue = "") String nameP
+    ) {
+        List<Profil> profils = repository.findLove(genderValue, colors, nameP);
+
+        model.addAttribute("profils", repository.findLove(genderValue, colors, nameP));
 
         if (profils.size() > 0) {
             return "profil";
