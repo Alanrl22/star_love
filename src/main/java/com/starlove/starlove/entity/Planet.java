@@ -3,17 +3,17 @@ package com.starlove.starlove.entity;
 public class Planet {
 
     private int id;
-    private String name;
+    private String nameP;
 
 
     public Planet() {
 
     }
 
-    public Planet(int id, String name) {
+    public Planet(int id, String nameP) {
 
         this.id = id;
-        this.name = name;
+        this.nameP = nameP;
     }
 
     public int getId() {
@@ -24,11 +24,11 @@ public class Planet {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNameP() {
+        return nameP;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameP(String nameP) {
+        this.nameP = nameP;
     }
 }

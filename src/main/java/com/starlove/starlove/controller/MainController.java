@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.starlove.starlove.repository.ProfilRepository;
 
-import javax.validation.groups.Default;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +38,8 @@ public class MainController {
                              ) {
         List<Profil> profils = repository.findLove(genderValue, colors, planet_id);
 
-        model.addAttribute("profils", repository.findLove(genderValue, colors, planet_id));
+
+        model.addAttribute("profils", repository.findLove(genderValue, colors, nameP));
 
         if (profils.size() > 0) {
             return "profil";
