@@ -17,7 +17,7 @@
     <img class="stormtrooper" src="image/stormheart.jpeg" >
     </div>
     <form action="/profil" method="post" class="formulaire">
-
+        <div>
             <label id="planetName">Choose the Planet :</label>
             <input class="planet-input" type="text" name="planetName" required minlength="4" maxlength="10" size="4">
 
@@ -46,16 +46,17 @@
             <label class="top-label">Choose your favorite creature:</label>
         <input class="gender-input"type="text" name="genderValue" required minlength="4" maxlength="10" size="4">
             <div class="home-gender">
-            <select name="gender" size="1">
-                <option value="Choose your gender">Choose your gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
+                <select name="gender" size="1">
+                    <option value="Choose your gender">Choose your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
             <div class="home-star">
             <button href="/profil" class="button" title="Click on me for find LOVE"><i class="fa fa-star" aria-hidden="true"></i></button>
             </div>
+        </div>
     </form>
 </body>
 </html>
