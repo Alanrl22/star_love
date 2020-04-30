@@ -78,8 +78,12 @@ form{
     display: flex;
     flex-direction: column;
 }
-form.formulaire{
+form.formulaire {
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 33vh;
 }
 form.input, form.select{
     width: 80%;
@@ -90,11 +94,14 @@ label#planetName, input.planet-input, div.home-colors, div.home-gender{
     border-radius: 20px;
     height: 1.2rem;
     border-color: var(--generality-color-font_title);
+    text-align: left;
+
 }
 select{
     width: 100%;
     border-radius: 20px;
     border-color: var(--generality-color-font_title);
+
 
 }
 .fa-star {
