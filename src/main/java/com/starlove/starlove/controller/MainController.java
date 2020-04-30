@@ -31,6 +31,7 @@ public class MainController {
 
     @PostMapping("/profil")
     public String postProfil(Model model,
+
                              @RequestParam(defaultValue = "") String colors,
                              @RequestParam(defaultValue = "") String genderValue,
                              @RequestParam(defaultValue = "") String nameP

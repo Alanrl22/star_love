@@ -41,4 +41,33 @@ public class ChooseRepository {
         }
         return null;
     }
+
+    public List<String> findYourGender(){
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+
+        try {
+            connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+
+            List<String> genders = new ArrayList<>();
+            statement = connection.prepareStatement(
+                    "SELECT distinct(gender) FROM people;"
+            );
+            resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                String eye = resultSet.getString("gender");
+
+                genders.add(eye);
+            }
+            return genders;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+
+    }
 }

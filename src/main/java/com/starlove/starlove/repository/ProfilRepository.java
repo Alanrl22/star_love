@@ -30,7 +30,9 @@ public class ProfilRepository {
                     DB_URL, DB_USER, DB_PASSWORD
             );
             statement = connection.prepareStatement(
+
                     "SELECT gender, people.name As name, planet.name AS planet, eye_color FROM people JOIN planet ON planet.id = people.planet_id WHERE planet.name LIKE ? AND gender LIKE ? AND eye_color LIKE ? ;"
+
             );
             statement.setString(1, eye_color);
             statement.setString(2, genderValue);
