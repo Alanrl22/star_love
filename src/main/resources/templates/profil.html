@@ -9,15 +9,13 @@
     <title>Profil</title>
 </head>
 <body>
-<h2>STAR LOVE</h2>
+<h1>STAR LOVE</h1>
 <div class="card" th:each="profil : ${profils}" >
     <img src="https://via.placeholder.com/200" alt="Avatar" >
     <div class="container">
         <h2><b th:text="${profil.name}">Name</b></h2>
         <p th:text="${profil.gender}">Genre</p>
         <p th:text="${profil.eye}">Eye</p>
-        <p th:text="${profil.idP}">Planet</p>
-
     </div>
 </div>
 </body>
