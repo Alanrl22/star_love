@@ -14,7 +14,7 @@
     </header>
 
     <form action="/profil" method="post" class="formulaire">
-        <div>
+        <div class="home-radio">
         <label class="top-label">Choose your favorite creature</label>
         <input id="how-friend" name="how" type="radio">
         <label for="how-friend" class="side-label">FEMALE</label>
@@ -23,11 +23,11 @@
         <input id="how-other" name="how" type="radio">
         <label for="how-other" class="side-label">OTHER...</label>
         </div>
-        <div>
+        <div class="home-planet">
             <label id="planet_id">Choose the Planet :</label>
             <input type="text" name="planet_id">
         </div>
-
+            <div class="home-colors">
             <select name="colors" size="1">
                 <option value="Choose their eyes colors">Choose their eyes colors</option>
                 <option value="Blue">Blue</option>
@@ -46,8 +46,12 @@
                 <option value="Black">Black</option>
                 <option value="Null">Null</option>
             </select>
-            <input type="text" name="genderValue">
-            <div>
+            </div>
+        <div class="home-gender">
+            <label class="top-label">Choose your favorite creature:</label>
+        <input type="text" name="genderValue">
+        </div>
+            <div class="home-star">
             <button href="/profil" class="button"><i class="fa fa-star" aria-hidden="true"></i></button>
             </div>
     </form>
