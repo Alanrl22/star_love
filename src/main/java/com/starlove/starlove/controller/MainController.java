@@ -39,7 +39,7 @@ public class MainController {
         List<Profil> profils = repository.findLove(genderValue, colors, planet_id);
 
 
-        model.addAttribute("profils", repository.findLove(genderValue, colors, nameP));
+        model.addAttribute("profils", repository.findLove(genderValue, colors, planet_id));
 
         if (profils.size() > 0) {
             return "profil";
