@@ -11,7 +11,7 @@
 /*  the text  */
 --generality-text-font_size: 1rem;
 --generality-title-font_size: 1rem;
---generality-title_xl-font_size: 2rem;
+--generality-title_xl-font_size: 3rem;
 
 }
 
@@ -35,14 +35,18 @@ body {
 h1 {
     display: flex;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Russo One';
     font-style: normal;
     font-weight: 400;
     color: #FBFF00;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
+}
+
+h2{
+    font-size: 1.7rem;
+    color: var(--generality-color-first) ;
 }
 .formulaire {
     display: flex;
@@ -51,7 +55,7 @@ h1 {
     align-items: center;
 }
 .title {
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: #FBFF00;
     text-align: center;
 }
@@ -60,9 +64,38 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
+}
+
+#imgstormtrooper{
+    height: auto;
+    width: auto;
     display: flex;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form.formulaire{
+    margin-top: 1rem;
+}
+form.input, form.select{
+    width: 80%;
+}
+label#planetName, input.planet-input, div.home-colors, div.home-gender{
+    width: 80%;
+    margin: 0.5rem;
+    border-radius: 20px;
+    height: 1.2rem;
+    border-color: var(--generality-color-font_title);
+}
+select{
+    width: 100%;
+    border-radius: 20px;
+    border-color: var(--generality-color-font_title);
+
 }
 .fa-star {
     color: #FBFF00;
@@ -112,6 +145,7 @@ h1 {
     text-align: center;
     border-radius: 1rem;
 }
+
 /* ----------   END OF HOME PAGE  ------------------ */
 
 /* ----------   START OF PROFIL  ------------------ */
