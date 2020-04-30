@@ -35,7 +35,7 @@ public class ProfilRepository {
                 String name = resultSet.getString("name");
                 String gender = resultSet.getString("gender");
                 int idP = resultSet.getInt("planet_id");
-                profils.add(new Profil(id, gender, name, eye, idP, null));
+                profils.add(new Profil(id, gender, name, eye, idP,  null));
             }
             return profils;
         } catch (SQLException e) {
