@@ -31,15 +31,8 @@ public class MainController {
 
     @PostMapping("/profil")
     public String postProfil(Model model,
-                             @RequestParam(defaultValue = "blue") String colors,
-                             @RequestParam(defaultValue = "other") String genderValue,
-                             @RequestParam(defaultValue = "1") int planet_id
-
-    ) {
-        List<Profil> profils = repository.findLove(genderValue, colors, planet_id);
-
-        model.addAttribute("profils", repository.findLove(genderValue, colors, planet_id));
-
+                             @RequestParam(defaultValue = "%") String colors,
+                             @RequestParam(defaultValue = "%") String genderValue,
                              @RequestParam(defaultValue = "%") String planetName
     ) {
         List<Profil> profils = repository.findLove(genderValue, colors, planetName);
