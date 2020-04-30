@@ -30,8 +30,8 @@
 /* ----------   START OF HOME PAGE  ------------------ */
 body {
     margin: 20px;
-
 }
+
 h1 {
     display: flex;
     justify-content: center;
@@ -471,20 +471,21 @@ div {
 }
 
 .the-demo {
-    width: 768px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
     margin: 0 auto;
+    margin-left: 2rem;
 }
 .example-item {
     width: 25%;
     padding-top: 325px;
 }
+
 /* ----------   END OF HOME PAGE  ------------------ */
 
 /* ----------   START OF PROFIL  ------------------ */
-.body-profil {
-    background-image: url("https://img.pngio.com/star-wars-space-backgrounds-wallpaper-cave-star-wars-space-background-png-1024_576.png");
-    background-size: cover;
-}
 
 .card {
     display: flex;
