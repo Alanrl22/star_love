@@ -40,6 +40,13 @@ public class MainController {
 
         model.addAttribute("profils", repository.findLove(genderValue, colors, planet_id));
 
+                             @RequestParam(defaultValue = "%") String planetName
+    ) {
+        List<Profil> profils = repository.findLove(genderValue, colors, planetName);
+
+        model.addAttribute("profils", repository.findLove(genderValue, colors, planetName));
+
+
         if (profils.size() > 0) {
             return "profil";
 
