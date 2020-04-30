@@ -46,7 +46,6 @@ public class MainController {
 
         model.addAttribute("profils", repository.findLove(genderValue, colors, planetName));
 
-
         if (profils.size() > 0) {
             return "profil";
 
