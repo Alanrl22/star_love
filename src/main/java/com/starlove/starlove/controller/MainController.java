@@ -1,5 +1,6 @@
 package com.starlove.starlove.controller;
 
+import com.starlove.starlove.entity.Planet;
 import com.starlove.starlove.entity.Profil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.starlove.starlove.repository.ProfilRepository;
 
-import javax.validation.groups.Default;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,6 +39,7 @@ public class MainController {
         List<Profil> profils = repository.findLove(genderValue, colors, planetName);
 
         model.addAttribute("profils", repository.findLove(genderValue, colors, planetName));
+
 
         if (profils.size() > 0) {
             return "profil";
