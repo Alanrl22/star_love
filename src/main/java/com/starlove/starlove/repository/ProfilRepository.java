@@ -19,7 +19,7 @@ public class ProfilRepository {
     private final static String DB_USER = "ewoks2";
     private final static String DB_PASSWORD = "ewoks1$Ewoks2!";
 
-    public List<Profil> findLove(String genderValue, String eye_color, String nameP) {
+    public List<Profil> findLove(String genderValue, String eye_color, int idP) {
 
         Connection connection = null;
         PreparedStatement statement = null;
@@ -36,7 +36,7 @@ public class ProfilRepository {
             );
             statement.setString(1, eye_color);
             statement.setString(2, genderValue);
-            statement.setString(3, nameP);
+            statement.setInt(3, planet_id);
 
             resultSet = statement.executeQuery();
 
@@ -45,10 +45,10 @@ public class ProfilRepository {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String eye = resultSet.getString("eye_color");
-                nameP = resultSet.getString("planet.name");
                 String gender = resultSet.getString("gender");
+                int idP = resultSet.getInt("planet_id");
 
-                profils.add(new Profil(id, eye, gender, nameP, null));
+                profils.add(new Profil(id, gender, eye, idP, null));
             }
             return profils;
 
