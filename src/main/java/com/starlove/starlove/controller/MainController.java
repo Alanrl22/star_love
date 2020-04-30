@@ -34,11 +34,11 @@ public class MainController {
     public String postProfil(Model model,
                              @RequestParam(defaultValue = "blue") String colors,
                              @RequestParam(defaultValue = "other") String genderValue,
-                             @RequestParam(defaultValue = "1") int planet_id
+                             @RequestParam(defaultValue = "1") int planet.name
     ) {
-        List<Profil> profils = repository.findLove(genderValue, colors, planet_id);
+        List<Profil> profils = repository.findLove(genderValue, colors, planet.name);
 
-        model.addAttribute("profils", repository.findLove(genderValue, colors, planet_id));
+        model.addAttribute("profils", repository.findLove(genderValue, colors, planet.nam));
 
         if (profils.size() > 0) {
             return "profil";

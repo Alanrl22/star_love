@@ -31,7 +31,7 @@ public class ProfilRepository {
             );
             statement = connection.prepareStatement(
                     "SELECT * FROM people " +
-                            "WHERE eye_color Like ? AND gender LIKE ? AND planet_id LIKE ? ;"
+                            "WHERE eye_color Like ? AND gender LIKE ? AND planet.name LIKE ? JOIN planet ON planet.id = people.planet_id ;"
             );
             statement.setString(1, eye_color);
             statement.setString(2, genderValue);
