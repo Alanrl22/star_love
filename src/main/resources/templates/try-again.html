@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +11,49 @@
 <body>
     <h1>STAR LOVE</h1>
 
-    <p>TRY AGAIN</p>
-    <img src="">
-    <div>
-    <button  href="/home" class="button"><i class="fa fa-star" aria-hidden="true"></i></button>
-    </div>
-    <div>
-    <a href="/home"> Back Home</a>
-        <a href="/home"><i class="fa fa-star" aria-hidden="true"></i></a>
-    </div>
-</body>
-</html>
+    <p class="try-again">TRY AGAIN</p>
 
-</div>
+    <div class="star-try">
+        <a href="/home" title="Try Again !"><i class="fa fa-star" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="the-demo">
+        <div class="example-item">
+            <div class="lightsaber">
+                <label for="bastien-example"></label>
+                <input type="checkbox" id="bastien-example">
+                <div class="switch"></div>
+                <div class="plasma bastien"></div>
+            </div>
+            <h3>Bastien</h3>
+        </div>
+        <div class="example-item">
+            <div class="lightsaber">
+                <label for="yoda-example"></label>
+                <input type="checkbox" id="yoda-example" checked="checked">
+                <div class="switch"></div>
+                <div class="plasma yoda"></div>
+            </div>
+            <h3>Yoda</h3>
+        </div>
+        <div class="example-item">
+            <div class="lightsaber">
+                <label for="darth-vader-example"></label>
+                <input type="checkbox" id="darth-vader-example" checked="checked">
+                <div class="switch"></div>
+                <div class="plasma vader"></div>
+            </div>
+            <h3>Vader</h3>
+        </div>
+        <div class="example-item clearfix">
+            <div class="lightsaber">
+                <label for="obi-wan-example"></label>
+                <input type="checkbox" id="obi-wan-example">
+                <div class="switch"></div>
+                <div class="plasma obi-wan"></div>
+            </div>
+            <h3>Obi</h3>
+        </div>
+    </div>
+  </body>
+</html>
