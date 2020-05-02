@@ -11,6 +11,7 @@ import com.starlove.starlove.repository.ProfilRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Controller
 public class MainController {
@@ -28,6 +29,15 @@ public class MainController {
     }
 
     private ProfilRepository repository = new ProfilRepository();
+
+    @GetMapping("/profilrandom")
+    public  String profilRandom(Model model){
+
+        List<Profil> profils = repository.profilRandom();
+        model.addAttribute("profils", profils);
+
+        return "profil";
+    }
 
     @PostMapping("/profil")
     public String postProfil(Model model,
