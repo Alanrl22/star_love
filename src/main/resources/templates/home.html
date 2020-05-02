@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style.css">
     <title>Home</title>
 </head>
-<body>
+<body class="profil-body">
     <header>
         <h1>STAR LOVE</h1>
     </header>
@@ -16,8 +16,10 @@
     <div id="imgstormtrooper">
     <img class="stormtrooper" src="image/stormheart.jpeg" >
     </div>
+    <section class="random">
     <h3>May the force be with you</h3>
-    <a th:href="@{/profilrandom}">Find love through strength</a>
+    <a th:href="@{/profilrandom}">Find love </a>
+    </section>
     <h3>You could make yours selection</h3>
     <form action="/profil" method="post" class="formulaire">
             <input class="planet-input" type="text" placeholder=" Choose the planet" name="planetName" required minlength="4" maxlength="10" size="4">
