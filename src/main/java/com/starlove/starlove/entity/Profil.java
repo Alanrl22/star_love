@@ -1,4 +1,5 @@
 package com.starlove.starlove.entity;
+
 public class Profil {
     private int id;
     private String gender;
@@ -6,13 +7,24 @@ public class Profil {
     private String name;
     private int idP;
     private String image;
-    public Profil(int id, String gender, String name, String eye, int idP, String image) {
+    private  String hair;
+    private String skin;
+    private  String nameP;
+
+
+
+
+    public Profil(int id, String gender, String name, String eye, int idP, String image, String hair, String skin, String nameP) {
         this.id = id;
         this.gender = gender;
         this.name = name;
         this.eye = eye;
         this.idP= idP;
         this.image = image;
+        this.hair = hair;
+        this.skin = skin;
+        this.nameP = nameP;
+
     }
     public Profil() {}
     public int getId() {
@@ -51,4 +63,24 @@ public class Profil {
     public void setImage(String image) {
         this.image = image;
     }
+    public String getHair() {
+        return hair;
+    }
+    public void setHair(String hair) {
+        this.hair = hair;
+    }
+    public String getSkin() {
+        return skin;
+    }
+    public void setSkin(String skin) {
+        this.skin = skin;
+    }
+    public String getNameP() {
+        return nameP;
+    }
+    public void setNameP(String nameP) {
+        this.nameP = nameP;
+    }
+
+
 }
